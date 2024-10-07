@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상단 이미지 섹션 -->
+    <ImageView
+        android:id="@+id/partnership_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 클리닉 이름 -->
+    <TextView
+        android:id="@+id/partnership_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="병원명"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/partnership_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:gravity="center"/>
+
+    <!-- 클리닉 주소 -->
+    <TextView
+        android:id="@+id/partnership_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="병원 주소"
+        app:layout_constraintTop_toBottomOf="@id/partnership_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:gravity="center"/>
+
+    <!-- 네비게이션 버튼들 -->
+    <LinearLayout
+        android:id="@+id/navigation_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/partnership_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#D3D3D3"/>
+
+    </LinearLayout>
+
+    <!-- 클리닉 정보 -->
+    <TextView
+        android:id="@+id/partnership_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="제휴 내용 칸"
+        android:padding="16dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/navigation_buttons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/card_border_6" />
+
+
+    <TextView
+        android:id="@+id/partnership_details_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/partnership_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- 하단 중앙 버튼 추가 -->
+    <android.widget.Button
+        android:id="@+id/bottom_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예약페이지로 이동"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/card_border_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

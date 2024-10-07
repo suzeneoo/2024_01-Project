@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_chalkadoc"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChalKaDOC"
+        tools:targetApi="31" >
+        <activity
+            android:name=".popup.CustomPopupPartnership"
+            android:exported="false" />
+        <activity
+            android:name=".popup.CustomPopupPictureActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.ai_face.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="12451000" />
+        </provider>
+
+        <activity
+            android:name=".home.HomeCameraDetailResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mypage.UserInformationModifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mypage.HospitalRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".listview.CustomListView"
+            android:exported="false" />
+        <activity
+            android:name=".home.HospitalInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeCameraResultActivity_1"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeCameraResultActivity_2"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeCameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".partnership.PartnershipActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".listview.JHospitalInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".common.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".navigation.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeCameraTakePictureActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+    </application>
+
+</manifest>

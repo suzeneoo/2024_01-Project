@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#87CEEB" />
+    <corners android:radius="18dp" />
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+    <!--    <stroke-->
+    <!--        android:width="1dp"-->
+    <!--        android:color="#000000" /> &lt;!&ndash; 원하는 경우 테두리 추가 &ndash;&gt;-->
+</shape>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_24"/>
+
+    <item android:id="@+id/partnership"
+        android:title="Partnership"
+        android:icon="@drawable/ic_apartment_24"/>
+
+    <item android:id="@+id/mypage"
+        android:title="MyPage"
+        android:icon="@drawable/ic_account_circle_24"/>
+
+</menu>

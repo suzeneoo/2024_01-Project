@@ -1,0 +1,130 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".partnership.PartnershipActivity">
+
+    <!-- Google Map Fragment를 화면에 표시 -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 버튼들을 포함하는 LinearLayout을 화면 상단에 위치시킴 -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_border_4"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:layout_gravity="top">
+
+        <android.widget.Button
+            android:id="@+id/btn_distance2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/square_background_border_blue"
+            android:text="거리 순"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <!-- 치과 버튼 -->
+        <android.widget.Button
+            android:id="@+id/btn_distance"
+            android:background="@drawable/square_background_border_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="내 주변" />
+
+        <ImageView
+            android:id="@+id/iv_option"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_hospital"
+            android:textColor="#000000"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_border_4"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="80dp"
+        android:padding="8dp">
+
+        <!-- 줌 인 버튼 -->
+        <android.widget.Button
+            android:id="@+id/zoom_in_button"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_background_border_blue"
+            android:text="+"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textSize="24dp"/>
+
+        <!-- 줌 아웃 버튼 -->
+        <android.widget.Button
+            android:id="@+id/zoom_out_button"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_background_border_blue"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="24dp"/>
+
+    </LinearLayout>
+
+    <!-- Bottom Sheet Layout을 포함하는 LinearLayout -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="300dp">
+
+        <!-- Drag Handle -->
+        <View
+            android:id="@+id/drag_handle"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:background="@drawable/card_border_4"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:rotation="72" />
+
+        <!-- ListView at the bottom -->
+        <ListView
+            android:id="@+id/listView_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_border_4"/>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
